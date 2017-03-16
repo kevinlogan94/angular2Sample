@@ -1,16 +1,24 @@
-import {Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Message} from 'primeng/primeng';
 import {ButtonModule} from 'primeng/primeng';
 import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'home',
-  //styleUrls: ['../../../node_modules/primeng/resources/themes/omega/theme.css'],
+  styleUrls: ['./home.component.css'],
   encapsulation: ViewEncapsulation.None,
   templateUrl: './home.component.html'
 })
 export class HomeComponent {
   msgs: Message[] = [];
+  public fullPath:string = '../../pictures/humana.jpg';
+
+  /*constructor() {
+    this.fullPath = '../../pictures/samplePhoto';
+  }*/
+
+  ngOnInit() {
+  }
 
   show() {
     this.msgs.push({severity:'info', summary:'Info Message', detail:'PrimeNG rocks'});
