@@ -15,6 +15,7 @@ import { RepoDetailComponent } from './github/repo-detail/repo-detail.component'
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { TodoComponent } from './todo/todo.component';
+import { ProjectListComponent } from "./services/components/ProjectList.component";
 
 import {InputTextModule} from 'primeng/primeng';
 import {GrowlModule} from 'primeng/primeng';
@@ -29,7 +30,8 @@ import {ButtonModule} from 'primeng/primeng';
     RepoDetailComponent,
     HomeComponent,
     ContactComponent,
-    TodoComponent
+    TodoComponent,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,

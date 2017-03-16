@@ -1,0 +1,14 @@
+<h1>Rest</h1>
+<p>Rest Testing page</p>
+<ul>
+  <!--<li *ngFor="let project of projects">{{project.name}}</li>-->
+</ul>
+<input #id placeholder="id">
+<input #name placeholder="name">
+<input #dueDate placeholder="dueDate">
+<button (click)="addProject(id.value, name.value, dueDate.value);
+                 id.value='';
+                 name.value='';
+                 dueDate.value=''">Add Project</button>
+
+<p class='error' *ngIf='errorMessage'>{{errorMessage}}</p>
