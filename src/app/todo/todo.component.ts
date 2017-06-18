@@ -1,16 +1,18 @@
 import {Component} from '@angular/core';
 import {task} from './models/task';
+import {filterTasksPipe} from '../pipes/filterTasks.pipe'
 
 @Component({
   selector: 'todo',
-  styleUrls: ['./todo.component.css'],
   templateUrl: './todo.component.html'
 })
 export class TodoComponent {
   tasks: task[]=[];
   id: number = -1;
+  filter: boolean;
+  shownTasks='All Tasks';
 
-  addTodo(todo: string){
+  addTask(todo: string){
     //++this.id increments the id before it is used as an argument
     this.tasks.push(new task(++this.id, todo, false));
   }

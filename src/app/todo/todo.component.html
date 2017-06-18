@@ -1,20 +1,26 @@
 <h3>Todo Component</h3>
-<p>This is the todo component!</p>
-<ul>
-  <!--each list item changes css line-through styling when clicked-->
-  <li *ngFor="let task of tasks"
-    [ngClass]="{'complete':task.css}" (click)="task.css=!task.css;">
-    Task: {{task.name}}
-    <button (click)="removeTodo(task.id)">X</button>
-  </li>
-</ul>
+<p>Add a component and click it </p>
 
-<h2>Add todo</h2>
-<input #name placeholder="Todo">
-<button (click)="addTodo(name.value)">Add</button>
-<br/>
-<h4>Filter</h4>
-<button>Show only complete</button>
-<!--<input #remove placeholder="remove by name">
-<button (click)="removeTodo(remove.value)">remove</button>
-<br/>-->
+<h2>Show: {{shownTasks}}</h2>
+
+<div>
+  <ul>
+    <li *ngFor="let task of (tasks | filterTasks:filter)"
+      [ngClass]="{'complete':task.status}" (click)="task.status=!task.status;">
+      <span>Task: {{task.name}}</span>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h2>Add todo</h2>
+  <input #newTask (keyup.enter)="addTask(newTask.value); newTask.value=''" placeholder="Enter a new task">
+  <button (click)="addTask(newTask.value); newTask.value=''">Add</button>
+</div>
+
+<div>
+  <h4>Filter</h4>
+  <button (click)="filter=null; shownTasks='All Tasks'">All</button>
+  <button (click)="filter=true; shownTasks='Completed Tasks'">Completed Tasks</button>
+  <button (click)="filter=false; shownTasks='Incomplete Tasks'">Incomplete Tasks</button>
+</div>

@@ -1,0 +1,32 @@
+<h3>Justice Component</h3>
+<p>3 will protect you. The others will try to destroy you. Choose wisely!</p>
+
+<div class='characters'>
+  <div *ngFor="let character of characters" id='{{character}}'
+       (click)="choose(character)" [ngClass]="{'chosen': chosen.indexOf(character) > -1}">
+    <img/>
+  </div>
+</div>
+
+<button (click)="testYourMight()" *ngIf='chosen.length == 3'>Test your might..</button>
+
+<div *ngIf='result!=null' class='results'>
+
+  <div *ngIf='result==true'>
+    <h1>VICTORY!!!</h1>
+    <h2>Wow, you pulled it off!</h2>
+  </div>
+
+  <div *ngIf='result==false'>
+    <h1>Defeat..</h1>
+    <h2>Hey, at least you tried.</h2>
+  </div>
+
+  <h2>Your team:</h2>
+  <ul>
+    <li *ngFor="let character of chosen">{{character}}</li>
+  </ul>
+
+  <button (click)="reset()">Try Again?</button>
+
+</div>

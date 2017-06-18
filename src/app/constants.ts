@@ -1,6 +1,11 @@
 //Constants file
 
-export var endpointPost = "/some/endpoint";
-export var endpointPut = "/some/endpoint";
-export var endpointGet = "/some/endpoint";
-export var endpointDelete = "/some/endpoint";
+export let endpointPost = "/some/endpoint";
+export let endpointPut = "/some/endpoint";
+export let endpointGet = "/some/endpoint";
+export let endpointDelete = "/some/endpoint";
+
+export let characters = [
+                          'batman', 'spiderman', 'deadpool', 'superman', 'wolverine',
+                          'thor', 'joker', 'hulk', 'drstrange'
+                        ];
