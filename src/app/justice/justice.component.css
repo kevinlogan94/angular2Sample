@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.characters > div.chosen { background: #42a5f5; border-radius: 0px; }
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  max-height: 850px;
+  max-width: 850px;
+}
+.characters img {
+  width: 80%;
+  height: 80%;
+  margin: 5%;
+}
+.characters > div {
+  width: 33.3%;
+  height: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+#superman img { content:url("/../images/characters/superman.jpg");}
+#batman img {   content:url("/../images/characters/batman.jpg");}
+#joker img {    content:url("/../images/characters/joker.jpg");}
+#hulk img {     content:url("/../images/characters/hulk.jpg");}
+#thor img {     content:url("/../images/characters/thor.jpg");}
+#drstrange img {content:url("/../images/characters/dr.strange.jpg");}
+#wolverine img {content:url("/../images/characters/wolverine.jpg");}
+#spiderman img {content:url("/../images/characters/spiderman.jpg");}
+#deadpool img { content:url("/../images/characters/deadpool.jpg");}

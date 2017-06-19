@@ -1,4 +1,4 @@
-<h3>Justice Component</h3>
+<h2>Justice Component</h2>
 <p>3 will protect you. The others will try to destroy you. Choose wisely!</p>
 
 <div class='characters'>
@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<button (click)="testYourMight()" *ngIf='chosen.length == 3'>Test your might..</button>
+<button (click)="testYourMight()" *ngIf='chosen.length == 3 && result==null'>Test your might..</button>
 
 <div *ngIf='result!=null' class='results'>
 

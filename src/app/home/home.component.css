@@ -1,0 +1,15 @@
+:host { text-align: center; }
+
+.profileImage {
+  background: url('/../../images/profilepic.jpg') no-repeat;
+  background-size: 100% 100%;
+  width: 20em;
+  height: 20em;
+  border-radius: 25px;
+  box-shadow: 2px 5px 5px #888888;
+}
+.btn {
+  margin: 10px auto;
+  width: 60%;
+}
+.linkedinLogo { background: url('/../images/linkedinLogo.jpg') no-repeat; background-size: 100% 100%; }

@@ -1,0 +1,20 @@
+:host { text-align: center; }
+.complete{text-decoration: line-through;}
+span { display: block; cursor: pointer; }
+.btn, button { padding: 5px; }
+input {
+  border-radius: 5px;
+  padding: 10px;
+  border: gray 1px solid;
+}
+.tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+span {
+  width: 49%;
+  border: solid gray 1px;
+  padding: 10px 0;
+}

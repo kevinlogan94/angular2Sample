@@ -4,6 +4,7 @@ import {filterTasksPipe} from '../pipes/filterTasks.pipe'
 
 @Component({
   selector: 'todo',
+  styleUrls: ['./todo.component.css'],
   templateUrl: './todo.component.html'
 })
 export class TodoComponent {

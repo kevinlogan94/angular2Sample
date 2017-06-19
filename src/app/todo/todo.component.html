@@ -1,25 +1,21 @@
-<h3>Todo Component</h3>
-<p>Add a component and click it </p>
+<h2>Todo Component</h2>
+<p>Add a task and click it to make it complete.</p>
 
 <h2>Show: {{shownTasks}}</h2>
 
-<div>
-  <ul>
-    <li *ngFor="let task of (tasks | filterTasks:filter)"
-      [ngClass]="{'complete':task.status}" (click)="task.status=!task.status;">
-      <span>Task: {{task.name}}</span>
-    </li>
-  </ul>
+<div class='tasks'>
+  <span *ngFor="let task of (tasks | filterTasks:filter)"
+    [ngClass]="{'complete':task.status}" (click)="task.status=!task.status;">
+      Task: {{task.name}}
+  </span>
 </div>
 
 <div>
-  <h2>Add todo</h2>
   <input #newTask (keyup.enter)="addTask(newTask.value); newTask.value=''" placeholder="Enter a new task">
   <button (click)="addTask(newTask.value); newTask.value=''">Add</button>
 </div>
 
 <div>
-  <h4>Filter</h4>
   <button (click)="filter=null; shownTasks='All Tasks'">All</button>
   <button (click)="filter=true; shownTasks='Completed Tasks'">Completed Tasks</button>
   <button (click)="filter=false; shownTasks='Incomplete Tasks'">Incomplete Tasks</button>

@@ -1,14 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
+import { linkedinUrl } from '../constants';
 
 @Component({
   selector: 'home',
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./home.component.css'],
   templateUrl: './home.component.html'
 })
-export class HomeComponent {
-  public fullPath:string = '../../images/robin.jpg';
-
-  ngOnInit() {}
-
-}
+export class HomeComponent { linkedinUrl = linkedinUrl; }

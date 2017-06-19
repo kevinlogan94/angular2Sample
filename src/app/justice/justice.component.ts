@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { ViewEncapsulation } from '@angular/core';
-
 import { characters } from '../constants'
 
 @Component({
   selector: 'justice',
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./justice.component.css'],
   templateUrl: './justice.component.html'
 })
 export class justiceComponent {
@@ -17,6 +15,7 @@ export class justiceComponent {
     let random = Math.floor(Math.random() * 100) + 1;
     if(random >= 50)this.result = true
     else this.result=false;
+    window.scrollTo(0,document.body.scrollHeight);
   }
 
   choose(character: String) {

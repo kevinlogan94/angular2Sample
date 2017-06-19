@@ -9,3 +9,5 @@ export let characters = [
                           'batman', 'spiderman', 'deadpool', 'superman', 'wolverine',
                           'thor', 'joker', 'hulk', 'drstrange'
                         ];
+export let githubUrl = "https://github.com/kevinlogan94/angular2Sample";
+export let linkedinUrl = "https://www.linkedin.com/in/kevin-logan-73277594";
