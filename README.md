@@ -1,4 +1,7 @@
 
+# OLD REPOSITORY
+# This app needs to be updated.
+
 # angular2Sample
 
 A simple angular2 project.
