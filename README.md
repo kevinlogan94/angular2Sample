@@ -1,6 +1,6 @@
 
 # OLD REPOSITORY
-# This app needs to be updated.
+This app needs to be updated.
 
 # angular2Sample
 
